@@ -31,6 +31,7 @@ import UIKit
 import WolfOSBridge
 import WolfFoundation
 import WolfGeometry
+import WolfPipe
 
 public func + (lhs: LayoutPriority, rhs: Float) -> LayoutPriority {
     return LayoutPriority(rawValue: lhs.rawValue + rhs)
@@ -228,3 +229,68 @@ extension OSView {
         }
     }
 #endif
+
+public func constrain<V: OSView>(size: CGSize) -> (_ view: V) -> V {
+    return { view in
+        view.constrainSize(to: size)
+        return view
+    }
+}
+
+public func constrain<V: OSView>(width: CGFloat) -> (_ view: V) -> V {
+    return { view in
+        view.constrainWidth(to: width)
+        return view
+    }
+}
+
+public func constrain<V: OSView>(height: CGFloat) -> (_ view: V) -> V {
+    return { view in
+        view.constrainHeight(to: height)
+        return view
+    }
+}
+
+public func resistHorizontalCompression<V: OSView>(priority: LayoutPriority) -> (_ view: V) -> V {
+    return { view in
+        view.setContentCompressionResistancePriority(priority, for: .horizontal)
+        return view
+    }
+}
+
+public func resistHorizontalCompression<V: OSView>(_ view: V) -> V {
+    return view |> resistHorizontalCompression(priority: .required)
+}
+
+public func resistVerticalCompression<V: OSView>(priority: LayoutPriority) -> (_ view: V) -> V {
+    return { view in
+        view.setContentCompressionResistancePriority(priority, for: .vertical)
+        return view
+    }
+}
+
+public func resistVerticalCompression<V: OSView>(_ view: V) -> V {
+    return view |> resistVerticalCompression(priority: .required)
+}
+
+public func hugHorizontalContent<V: OSView>(priority: LayoutPriority) -> (_ view: V) -> V {
+    return { view in
+        view.setContentHuggingPriority(priority, for: .horizontal)
+        return view
+    }
+}
+
+public func hugHorizontalContent<V: OSView>(_ view: V) -> V {
+    return view |> hugHorizontalContent(priority: .required)
+}
+
+public func hugVerticalContent<V: OSView>(priority: LayoutPriority) -> (_ view: V) -> V {
+    return { view in
+        view.setContentHuggingPriority(priority, for: .horizontal)
+        return view
+    }
+}
+
+public func hugVerticalContent<V: OSView>(_ view: V) -> V {
+    return view |> hugVerticalContent(priority: .required)
+}

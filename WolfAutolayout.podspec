@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'WolfAutolayout'
-    s.version          = '1.0.2'
+    s.version          = '1.1.0'
     s.summary          = 'Conveniences for working with Autolayout.'
 
     s.homepage         = 'https://github.com/wolfmcnally/WolfAutolayout'
@@ -21,4 +21,5 @@ Pod::Spec.new do |s|
     s.dependency 'WolfFoundation'
     s.dependency 'WolfGeometry'
     s.dependency 'WolfOSBridge'
+    s.dependency 'WolfPipe'
 end
