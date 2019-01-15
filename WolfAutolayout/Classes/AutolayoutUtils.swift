@@ -251,6 +251,17 @@ public func constrain<V: OSView>(height: CGFloat) -> (_ view: V) -> V {
     }
 }
 
+public func constrainAspect<V: OSView>(_ aspectRatio: AspectRatio) -> (_ view: V) -> V {
+    return { view in
+        view.constrainAspect(to: aspectRatio)
+        return view
+    }
+}
+
+public func constrainAspect<V: OSView>(_ view: V) -> V {
+    return view |> constrainAspect(.square)
+}
+
 public func resistHorizontalCompression<V: OSView>(priority: LayoutPriority) -> (_ view: V) -> V {
     return { view in
         view.setContentCompressionResistancePriority(priority, for: .horizontal)
