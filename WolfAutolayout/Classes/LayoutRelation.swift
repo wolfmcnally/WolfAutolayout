@@ -37,6 +37,8 @@ public func string(forRelation relation: NSLayoutConstraint.Relation) -> String 
         result = "<="
     case .greaterThanOrEqual:
         result = ">="
+    @unknown default:
+        fatalError()
     }
     return result
 }

@@ -225,6 +225,8 @@ extension OSView {
                 return ".horizontal"
             case .vertical:
                 return ".vertical"
+            @unknown default:
+                fatalError()
             }
         }
     }

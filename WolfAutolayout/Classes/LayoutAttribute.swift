@@ -58,6 +58,8 @@ import UIKit
             result = "firstBaseline"
         case .notAnAttribute:
             result = "notAnAttribute"
+        @unknown default:
+            fatalError()
         }
         return result
     }
@@ -107,6 +109,8 @@ import UIKit
             result = "centerXWithinMargins"
         case .centerYWithinMargins:
             result = "centerYWithinMargins"
+        @unknown default:
+            fatalError()
         }
         return result
     }
