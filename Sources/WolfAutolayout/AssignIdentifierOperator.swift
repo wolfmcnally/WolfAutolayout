@@ -1,5 +1,5 @@
 //
-//  AssignPriorityOperator.swift
+//  AssignIdentifierOperator.swift
 //  WolfAutolayout
 //
 //  Created by Wolf McNally on 6/25/17.
@@ -22,9 +22,9 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-import WolfFoundation
+import WolfCore
 
 ///
-/// Assign-Priority-Operator
+/// Assign-Identifier-Operator
 ///
-infix operator =&= : AttributeAssignmentPrecedence
+infix operator =%=  : AttributeAssignmentPrecedence

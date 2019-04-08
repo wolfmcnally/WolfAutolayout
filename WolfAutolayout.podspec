@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'WolfAutolayout'
-    s.version          = '2.0.0'
+    s.version          = '2.0.1'
     s.summary          = 'Conveniences for working with Autolayout.'
 
     s.homepage         = 'https://github.com/wolfmcnally/WolfAutolayout'
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
     s.author           = { 'Wolf McNally' => 'wolf@wolfmcnally.com' }
     s.source           = { :git => 'https://github.com/wolfmcnally/WolfAutolayout.git', :tag => s.version.to_s }
 
-    s.source_files = 'WolfAutolayout/Classes/**/*'
+    s.source_files = 'Sources/WolfAutolayout/**/*'
 
     s.swift_version = '5.0'
 
@@ -18,8 +18,6 @@ Pod::Spec.new do |s|
 
     s.module_name = 'WolfAutolayout'
 
-    s.dependency 'WolfFoundation'
+    s.dependency 'WolfCore'
     s.dependency 'WolfGeometry'
-    s.dependency 'WolfOSBridge'
-    s.dependency 'WolfPipe'
 end

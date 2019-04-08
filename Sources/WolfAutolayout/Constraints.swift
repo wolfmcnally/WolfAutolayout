@@ -28,7 +28,7 @@ import UIKit
 import AppKit
 #endif
 
-import WolfFoundation
+import WolfCore
 
 public final class Constraints: Invalidatable {
     public private(set) var constraints: [NSLayoutConstraint]

@@ -1,8 +1,8 @@
 //
-//  ConstraintsCreationOperators.swift
+//  AssignPriorityOperator.swift
 //  WolfAutolayout
 //
-//  Created by Wolf McNally on 10/2/18.
+//  Created by Wolf McNally on 6/25/17.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,21 +22,9 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-import WolfFoundation
+import WolfCore
 
-/// Creates a `Constraints` object from an array of layout constraints,
-/// invalidates the constraints on the left-hand side, and assigns
-/// the resulting constraints to the left-hand side.
 ///
-/// This is a specialization of the Invalidate-And-Assign operator.
-public func ◊= (lhs: inout Constraints?, rhs: [NSLayoutConstraint]) {
-    lhs?.invalidate()
-    lhs = Constraints(rhs)
-}
-
-prefix operator ◊
-
-/// Creates a `Constraints` object from an array of layout constraints.
-@discardableResult public prefix func ◊(rhs: [NSLayoutConstraint]) -> Constraints {
-    return Constraints(rhs)
-}
+/// Assign-Priority-Operator
+///
+infix operator =&= : AttributeAssignmentPrecedence
