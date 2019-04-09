@@ -29,7 +29,7 @@ import UIKit
 #endif
 
 import WolfCore
-import WolfGeometry
+import WolfGraphics
 
 public func + (lhs: LayoutPriority, rhs: Float) -> LayoutPriority {
     return LayoutPriority(rawValue: lhs.rawValue + rhs)
