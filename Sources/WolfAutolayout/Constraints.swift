@@ -77,4 +77,8 @@ public final class Constraints: Invalidatable {
         deactivate()
         constraints.removeAll()
     }
+
+    public subscript(index: Int) -> NSLayoutConstraint {
+        return constraints[index]
+    }
 }
