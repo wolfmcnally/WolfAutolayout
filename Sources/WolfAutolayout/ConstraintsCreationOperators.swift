@@ -23,6 +23,11 @@
 //  SOFTWARE.
 
 import WolfCore
+#if canImport(UIKit)
+import UIKit
+#elseif canImport(AppKit)
+import AppKit
+#endif
 
 /// Creates a `Constraints` object from an array of layout constraints,
 /// invalidates the constraints on the left-hand side, and assigns
