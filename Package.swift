@@ -14,7 +14,7 @@ let package = Package(
         ],
     dependencies: [
         .package(url: "https://github.com/wolfmcnally/WolfOSBridge", from: "2.0.0"),
-        .package(url: "https://github.com/wolfmcnally/WolfGraphics", from: "1.0.0"),
+//        .package(url: "https://github.com/wolfmcnally/WolfGraphics", from: "1.0.0"),
         .package(url: "https://github.com/wolfmcnally/WolfFoundation", from: "5.0.0"),
         .package(url: "https://github.com/wolfmcnally/WolfPipe", from: "2.0.0"),
         .package(url: "https://github.com/wolfmcnally/WolfGeometry", from: "4.0.0")
@@ -24,7 +24,7 @@ let package = Package(
             name: "WolfAutolayout",
             dependencies: [
                 "WolfOSBridge",
-                "WolfGraphics",
+//                "WolfGraphics",
                 "WolfFoundation",
                 "WolfPipe",
                 "WolfGeometry"

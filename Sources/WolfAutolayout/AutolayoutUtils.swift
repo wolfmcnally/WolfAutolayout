@@ -29,7 +29,7 @@ import AppKit
 #endif
 
 import WolfFoundation
-import WolfGraphics
+import WolfGeometry
 import WolfOSBridge
 import WolfPipe
 
