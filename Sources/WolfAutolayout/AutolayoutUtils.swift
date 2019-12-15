@@ -28,8 +28,10 @@ import UIKit
 import AppKit
 #endif
 
-import WolfCore
+import WolfFoundation
 import WolfGraphics
+import WolfOSBridge
+import WolfPipe
 
 public func + (lhs: LayoutPriority, rhs: Float) -> LayoutPriority {
     return LayoutPriority(rawValue: lhs.rawValue + rhs)

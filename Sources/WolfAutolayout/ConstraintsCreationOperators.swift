@@ -22,7 +22,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-import WolfCore
+import WolfFoundation
 #if canImport(UIKit)
 import UIKit
 #elseif canImport(AppKit)
